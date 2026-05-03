@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PromptQuest</title>
+    <meta name="description" content="An ad-free, kid-safe, educational AI-powered adventure game." />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div id="app" class="glass-panel">
+      <header>
+        <h1>PromptQuest</h1>
+        <div class="stats">
+          <div class="score-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            <span id="score-display">0</span>
+          </div>
+        </div>
+      </header>
+      
+      <main class="main-content">
+        <div id="story-container" class="story-container">
+          <!-- Messages will go here -->
+        </div>
+
+        <div class="input-area">
+          <button id="voice-btn" class="btn btn-icon btn-voice" title="Use Voice Input">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="22"></line></svg>
+          </button>
+          <input type="text" id="chat-input" placeholder="What do you do next?" autocomplete="off" />
+          <button id="send-btn" class="btn">
+            Send
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </div>
+      </main>
+    </div>
+
+    <!-- Math Puzzle Modal -->
+    <div id="puzzle-modal" class="modal-overlay">
+      <div class="modal glass-panel">
+        <h2 id="puzzle-title">Math Challenge!</h2>
+        <p id="puzzle-question">What is 5 + 7?</p>
+        <div id="puzzle-options" class="puzzle-options">
+          <!-- Options will be injected here -->
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
